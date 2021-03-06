@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import Truc from './Truc/Truc'
+import Truc from './Truc/Truc';
+import Name from './Name/Name'
+
+import './Form.css';
 
 const Form = () => {
     return <form>
         <Truc />
+        <Name />
         
     </form>
 }

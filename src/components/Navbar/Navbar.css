@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+}
+
+.nav h1 {
+    flex-grow:1;
+    text-align: left;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav li {
+    margin: 16px;
+    padding: 16px;
+    background-color: #61dafb;
+    border-radius: 4px;
+}
+
+.nav a {
+    color: #282c34;
+    font-weight: 600;
+    text-decoration: none;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import './home.css';
 import Form from './Form/Form';
 
 const Home = () => {
-    return <div class="container">
+    return <div className="container">
         <Form />
     </div>
 }
