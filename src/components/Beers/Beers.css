@@ -1,0 +1,15 @@
+.beerListDiv {
+ display: flex;
+ flex-direction: column;
+}
+
+.beerList {
+    text-align: center               ;
+    border: 1px solid #61dafb;
+    border-spacing: 0;
+}
+
+.beerList th, td {
+    padding: 10px;
+    border: 1px solid #61dafb;
+}
