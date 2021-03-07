@@ -35,7 +35,6 @@ function App() {
         firebase.auth().onAuthStateChanged((user) => {
             // !! dubble ! transform in boolean
             setIsSignedIn(!!user);
-            console.log(user);
         });
     }, []);
 

@@ -1,8 +1,23 @@
-form {
+.form-create {
     display: flex;
     flex-direction: column;
 }
 
-input {
-    border-radius: 5px;
+.form-create input {
+    border-radius: 20%;
+    border: none;
+    margin-bottom: 1em;
+    padding: 10px;
+    font-weight: 600;
+    
+    text-align: center;
+}
+
+.form-create button {
+    border-radius: 20%;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    padding: 10px;
+    font-weight: 600;
 }
