@@ -1,10 +1,12 @@
 import React from 'react';
 import './Navbar.css';
 
+import firebase from "../../utils/firebaseConfig";
+
 import {Link} from "react-router-dom";
 
 const Navbar = () => {
-    return <div className="container nav">
+    return <nav className="container nav">
         <h1>Le truc que j'préfère !</h1>
         <ul>
             <li>
@@ -13,8 +15,14 @@ const Navbar = () => {
             <li>
               <Link to="/beers">Beers</Link>
             </li>
+            <li>
+              <div 
+                className="logout"
+                onClick={() => firebase.auth().signOut()}  
+              >Déconnecter  {firebase.auth().currentUser.displayName}</div>  
+            </li>
         </ul>
-    </div>
+    </nav>
 }
 
 export default Navbar

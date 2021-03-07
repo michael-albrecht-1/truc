@@ -2,7 +2,7 @@ const apiService = {
 
     findAllBeers: () => {
         
-        let fetchOptions = {
+        /*let fetchOptions = {
             // on veut récupérer de l'information, c'est donc la méthode (ou verbe)
             // GET que l'on veut utiliser.
             method: 'GET',
@@ -16,9 +16,9 @@ const apiService = {
         // il est important de comprendre que les différents then vont s'enchaîner
         // la sortie de l'un devient l'entrée du suivant.
         // par exemple la sortie du premier deviant l'entrée du deuxieme !
-        return request
+        /*return request
             .then((res) => res.json())
-        ;        
+        ;   */     
     },
     
 
