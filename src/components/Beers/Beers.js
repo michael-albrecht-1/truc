@@ -14,31 +14,30 @@ const Beers = () => {
             let previousList = snapshot.val();
             let list = [];
             for (let id in previousList) {
-                list.push({id, ...previousList[id]})
+                list.push({id, ...previousList[id]});
             }
-            setBeerList(list)
-        })
-    }, [])
+            setBeerList(list);
+        });
+    }, []);
 
     return <div className="container beerListDiv">
         <h1>welcome in beers list</h1>
         <table className="beerList">
-            <tr>
-                <th>Nom</th>
-                <th>style</th>
-                <th>brasserie</th>
-                <th>update/delete</th>
-            </tr>
-            {beerList && beerList.map( (beer, index) => {
-
-                return (
-                    <tbody>
-                        <UpdateDelete beer={beer} key={index} />
-                    </tbody>
-                )
-            }) 
-
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>style</th>
+                    <th>brasserie</th>
+                    <th>update/delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            {
+                beerList && beerList.map( (beer, index) => {
+                    return <UpdateDelete beer={beer} key={index} />
+                }) 
             }
+            </tbody>
         </table>
     </div>
 }
