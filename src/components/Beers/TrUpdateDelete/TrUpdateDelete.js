@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import firebase from "../../../utils/firebaseConfig";
-import './UpdateDelete.css';
+import './TrUpdateDelete.css';
 
-const UpdateDelete = ( {beer} ) => {
+const TrUpdateDelete = ( {beer} ) => {
     const [update, setUpdate] = useState(false);
     const [nameUpdate, setNameUpdate] = useState(null);
     const [styleUpdate, setStyleUpdate] = useState(null);
@@ -79,4 +79,4 @@ const UpdateDelete = ( {beer} ) => {
     );
 }
  
-export default UpdateDelete;
+export default TrUpdateDelete;

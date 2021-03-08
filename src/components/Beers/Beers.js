@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import firebase from '../../utils/firebaseConfig';
 import './Beers.css';
-import UpdateDelete from './UpdateDelete/UpdateDelete';
+import TrUpdateDelete from './TrUpdateDelete/TrUpdateDelete';
 
 
 const Beers = () => {
@@ -34,7 +34,7 @@ const Beers = () => {
             <tbody>
             {
                 beerList && beerList.map( (beer, index) => {
-                    return <UpdateDelete beer={beer} key={index} />
+                    return <TrUpdateDelete beer={beer} key={index} />
                 }) 
             }
             </tbody>
