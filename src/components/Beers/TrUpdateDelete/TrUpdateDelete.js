@@ -36,14 +36,17 @@ const TrUpdateDelete = ( {beer} ) => {
       };
 
     return ( 
-        <tr>
+        <tr className="truc">
             {
                 update === false && (
                     <>
                         <td>{beer.name}</td>
                         <td>{beer.style}</td>
                         <td>{beer.brewery}</td>
-                        <td> <button onClick={() => setUpdate(true)}>Modifier</button><button onClick={deleteItem}>Supprimer</button></td>
+                        <td> 
+                            <button onClick={() => setUpdate(true)}>&#9998;</button>
+                            <button onClick={deleteItem}>&#128465;</button>
+                        </td>
                     </>
                 )
             }
@@ -71,7 +74,10 @@ const TrUpdateDelete = ( {beer} ) => {
                                 onChange={(e) => setBreweryUpdate(e.target.value)}
                             />
                         </td>
-                        <td> <button onClick={updateItem}>Valider</button></td>
+                        <td> 
+                            <button onClick={() => setUpdate(false)}>&#10005;</button>
+                            <button onClick={updateItem}>&#10004;</button>
+                        </td>
                 </>
                 )
             }

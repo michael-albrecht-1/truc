@@ -4,19 +4,26 @@
 }
 
 .form-create input {
-    border-radius: 20%;
-    border: none;
+    background-color: #282c34;
+    border: #61dafb solid 1px;
+    color: #61dafb;
+    border-radius: 10%;
     margin-bottom: 1em;
     padding: 10px;
     font-weight: 600;
     text-align: center;
 }
 
+.form-create input::placeholder {
+    color: #b3ebfa;
+}
+
 .form-create button {
     border-radius: 20%;
     border: none;
-    background-color: #61dafb;
-    color: #282c34;
+    color: #61dafb;
+    background-color: #282c34;
+    border: #61dafb solid 1px;
     padding: 10px;
     font-weight: 600;
 }

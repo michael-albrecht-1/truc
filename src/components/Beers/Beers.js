@@ -28,7 +28,7 @@ const Beers = () => {
                     <th>Nom</th>
                     <th>style</th>
                     <th>brasserie</th>
-                    <th>update/delete</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

@@ -1,9 +1,17 @@
-button {
-    
+.truc button {
+    width: 2.5em;
     padding: 8px;
-    margin: 0 4px;
+    margin: 2px 4px;
     color: #61dafb;
     background-color: #282c34;
     border: #61dafb solid 1px;
     border-radius: 4px;
+}
+
+.truc input {
+    background-color: #282c34;
+    border: #61dafb solid 1px;
+    color: #61dafb;
+    border-radius: 10%;
+    padding: 6px;
 }
