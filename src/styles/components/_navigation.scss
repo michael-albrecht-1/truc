@@ -1,36 +1,55 @@
 .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $color-2;
-    color: $color-1;
-    border-radius: $borderRadius;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    border-top: $black 2px solid;
+    border-left: $black 2px solid;
+    border-right: $black 2px solid;
 
-    
-    h1 {
-        flex-grow:1;
-        text-align: left;
-        font-family: $font-1;
-    }
-    
-    ul {
+    .header {
         display: flex;
         flex-wrap: wrap;
-        list-style-type: none;
+        justify-content: space-between;
+        h1 {
+            padding: 2rem;
+            color: $color-1;
+            font-size: 4rem;
+            font-family: $font-3;
+            font-weight:bolder;
+        }
+        .profil {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            li{
+                width: 100%;
+                border-top: $black 2px solid;
+                padding: .6rem;
+                text-align: center;
+            }
+        }
     }
+
     
-    li {
-        margin: 16px;
-        padding: 16px;
-        background-color: $color-1;
-        border-radius: 4px;
-    }
     
-    a, .logout {
-        color: $color-2;
-        font-weight: 600;
-        text-decoration: none;
+    .links {
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            list-style-type: none;
+        }
+        
+        li {
+            padding: 16px;
+            border-top: $black 2px solid;
+            text-align: center;
+            background-color: transparent;
+            border-right: $black 2px solid;
+        }
+        
+        a {
+            color: $white;
+            font-weight: 600;
+            text-decoration: none;
+        }
     }
 }
-

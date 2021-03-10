@@ -10,7 +10,7 @@ $color-3: rgb(99, 164, 233);
 $color-4: #4FEDD2;
 $color-5: #36D0EA;
 $white: #ddd;
-$black: #333;
+$black: rgb(20, 20, 20);
 
 $borderRadius: 25px;
 $shadow: 0 1px 3px #333;
@@ -30,10 +30,11 @@ body {
   margin: 1rem auto;
   max-width: 1200px;
   font-family: $font-1;
-  color: $black;
+  color: $white;
+  background: #fffcf9 url(../assets/images/ricepaper-charcoal.jpg);
 }
 h1 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 button {
   cursor: pointer;
@@ -51,11 +52,9 @@ a:visited {
 }
 .home, .beer {
   display: flex;
-  padding: 2rem; 
-  background-color: $color-2;
-  border-radius: $borderRadius;
+  margin: 0;
+  border: solid 2px $black;
   text-align: center;
-  color: $color-1;
 
   @media screen and (max-width: 850px){
     display: block !important;

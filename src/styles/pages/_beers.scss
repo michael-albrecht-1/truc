@@ -7,32 +7,30 @@
     }
         
     .beerList {
-        text-align: center               ;
-        border: 1px solid #61dafb;
+        text-align: center;
         border-spacing: 0;
     }
     
     .beerList {
         th, td {
             padding: 10px;
-            border: 1px solid #61dafb;
+            border: 1px solid $black;
         }
     
         .truc button {
             width: 2.5em;
             padding: 8px;
             margin: 2px 4px;
-            color: $color-1;
-            background-color: #282c34;
-            border: #61dafb solid 1px;
+            background-color: transparent;
+            color: $white;
+            border: $black solid 1px;
             border-radius: 4px;
         }
     
         .truc input {
-            background-color: #282c34;
-            border: #61dafb solid 1px;
-            color: #61dafb;
-            border-radius: 10%;
+            background-color: $black;
+            border: $color-1 solid 1px;
+            color: $color-1;
             padding: 6px;
         }
     }
@@ -41,30 +39,49 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
-        
+
         input {
-            background-color: #282c34;
-            border: #61dafb solid 1px;
+            background-color: transparent;
+            border: $white solid 1px;
             color: #61dafb;
-            border-radius: 10%;
             margin-bottom: 1em;
             padding: 10px;
             font-weight: 600;
             text-align: center;
         }
-    
+        
         input::placeholder {
-            color: #b3ebfa;
+            color: $white;
         }
     
         button {
-            border-radius: 20%;
             border: none;
-            color: #61dafb;
-            background-color: #282c34;
+            color: $color-1;
+            background-color: transparent;
             border: #61dafb solid 1px;
             padding: 10px;
             font-weight: 600;
+        }
+    }
+
+    @media screen and (min-width: 600px){
+        .form {
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+
+    @media screen and (min-width: 800px){
+        .form {
+            width: 60%;
+            margin-left: 20%;
+        }
+    }
+
+    @media screen and (min-width: 1000px){
+        .form {
+            width: 40%;
+            margin-left: 30%;
         }
     }
 
