@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import firebase from "../../../utils/firebaseConfig";
-import './TrUpdateDelete.css';
 
 const TrUpdateDelete = ( {beer} ) => {
     const [update, setUpdate] = useState(false);

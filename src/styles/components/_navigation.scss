@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-2;
+    color: $color-1;
+    border-radius: $borderRadius;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    
+    h1 {
+        flex-grow:1;
+        text-align: left;
+        font-family: $font-1;
+    }
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+    
+    li {
+        margin: 16px;
+        padding: 16px;
+        background-color: $color-1;
+        border-radius: 4px;
+    }
+    
+    a, .logout {
+        color: $color-2;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import firebase from '../../utils/firebaseConfig';
-import './Beers.css';
 import TrUpdateDelete from './TrUpdateDelete/TrUpdateDelete';
+import Form from './Form/Form';
 
 
 const Beers = () => {
@@ -20,26 +20,29 @@ const Beers = () => {
         });
     }, []);
 
-    return <div className="container beerListDiv">
-        <h1>welcome in beers list</h1>
-        <table className="beerList">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>style</th>
-                    <th>brasserie</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            {
-                beerList && beerList.map( (beer, index) => {
-                    return <TrUpdateDelete beer={beer} key={index} />
-                }) 
-            }
-            </tbody>
-        </table>
-    </div>
+    return (
+        <div className="beer">
+            <h1>Bières !</h1>
+            <Form />
+            <table className="beerList">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>style</th>
+                        <th>brasserie</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                    beerList && beerList.map( (beer, index) => {
+                        return <TrUpdateDelete beer={beer} key={index} />
+                    }) 
+                }
+                </tbody>
+            </table>
+        </div>
+    )
 }
 
 export default Beers

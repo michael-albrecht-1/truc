@@ -8,9 +8,6 @@ import {
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "./utils/firebaseConfig";
 
-
-import './App.css';
-
 import Home from './components/Home/Home';
 import Beers from './components/Beers/Beers';
 import Navbar from './components/Navbar/Navbar';

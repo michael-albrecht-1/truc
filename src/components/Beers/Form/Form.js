@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
-
 import firebase from '../../../utils/firebaseConfig';
-
-import './Form.css';
 
 const Form = () => {
     const [name, setName] = useState('');
@@ -25,7 +22,7 @@ const Form = () => {
     }
 
     return (
-        <div className="form-create">
+        <div className="form">
             <input 
                 type="text"
                 value={name}

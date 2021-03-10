@@ -1,11 +1,8 @@
 import React from 'react';
 
-import './home.css';
-import Form from './Form/Form';
-
 const Home = () => {
-    return <div className="container">
-        <Form />
+    return <div className="home container">
+        A viendre !
     </div>
 }
 
