@@ -91,8 +91,14 @@ const Form = () => {
                                     id={beer.id}
                                     onClick={handleSelectBeer}
                                 >
-                                    <div id="beerNameSugession">{beer.name}</div>
-                                    <div id="beerBrewerySugession">{beer.brewery}</div>                                    
+                                    <div id="beerNameSugession">
+                                        <i className="fas fa-beer"></i>
+                                        {beer.name}
+                                    </div>
+                                    <div id="beerBrewerySugession">
+                                        <i class="fas fa-industry"></i>
+                                        {beer.brewery}
+                                    </div>                                    
                                 </li>
                             )
                         })  
