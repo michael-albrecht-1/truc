@@ -5,19 +5,45 @@
 
     .header {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 3rem;
-        h1 {
+        .logo {
+            border-bottom: $black 2px solid;
             padding: 2rem;
-            color: $color-1;
-            font-size: 4rem;
-            font-family: $font-4;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            img {
+                min-width: 150px;
+                max-width: 200px;
+            }
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .date {
+                margin-top: 1rem;
+                text-align: center;
+            }
+            a {
+                color: $white;
+            }
+            h1 {
+                text-align: center;
+                color: $black;
+                font-size: 3rem;
+                font-family: $font-4;
+                text-align: center;
+            }
+        }
+        .title:hover {
+            a {
+                color: $color-1;
+            }
         }
         .profil {
             border-top: $black 2px solid;
-            width: 100%;
             display: flex;
             flex-direction: column;
 
@@ -36,8 +62,6 @@
             }
         }
     }
-
-    
     
     .links {
         ul {
@@ -72,16 +96,26 @@
     .navbar {
         .header {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             margin-bottom: 0;
-            h1 {
-                padding: 2rem;
-                color: $color-1;
-                font-size: 4rem;
-                font-family: $font-4;
-                text-align: center;
+            .logo {
+                border-bottom: none;
+                border-right: $black 2px solid;
+                img {
+                    height: 100%;
+                }
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                h1 {
+                    font-size: 3rem;
+                    font-family: $font-4;
+                    text-align: center;
+                }
             }
             .profil {
                 border-top: none;

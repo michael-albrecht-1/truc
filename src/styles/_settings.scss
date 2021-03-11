@@ -32,7 +32,7 @@ body {
   max-width: 1200px;
   font-family: $font-1;
   color: $white;
-  background: #fffcf9 url(../assets/images/ricepaper-charcoal.jpg);
+  background: #fffcf9 url(../images/ricepaper-charcoal.jpg);
 }
 h1 {
     margin: 2rem 0;
@@ -46,6 +46,7 @@ li {
 }
 a {
   text-decoration: none;
+  font-weight: $font-4;
   color: $black;
   cursor: pointer;
 }
