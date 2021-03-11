@@ -11,17 +11,17 @@ const TrUpdateDelete = ( {beer} ) => {
         let beerDB = firebase.database().ref('beersDB').child(beer.id);
         if (nameUpdate != null) {
             beerDB.update({
-                name: nameUpdate
+                name: nameUpdate.toLowerCase()
             })
         }
         if (styleUpdate !== null) {
             beerDB.update({
-                style: styleUpdate
+                style: styleUpdate.toLowerCase()
             })
         }
         if (breweryUpdate !== null) {
             beerDB.update({
-                brewery: breweryUpdate
+                brewery: breweryUpdate.toLowerCase()
             })
         }
         setUpdate(false);
@@ -39,9 +39,9 @@ const TrUpdateDelete = ( {beer} ) => {
             {
                 update === false && (
                     <>
-                        <td>{beer.name}</td>
-                        <td>{beer.style}</td>
-                        <td>{beer.brewery}</td>
+                        <td>{beer.name.charAt(0).toUpperCase() + beer.name.slice(1)}</td>
+                        <td>{beer.style.charAt(0).toUpperCase() + beer.style.slice(1)}</td>
+                        <td>{beer.brewery.charAt(0).toUpperCase() + beer.brewery.slice(1)}</td>
                         <td> 
                             <button onClick={() => setUpdate(true)}>&#9998;</button>
                             <button onClick={deleteItem}>&#128465;</button>

@@ -25,7 +25,7 @@ const Navbar = () => {
                                 + ' ' +date.getFullYear()
                             }
                         </div>
-                        <h1>Le truc que j'préfère !</h1>
+                        <h1>L'truc que J'préfère !</h1>
                     </Link>
                 </div>
                 <ul className="profil">

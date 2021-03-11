@@ -11,9 +11,9 @@ const Form = () => {
     const createBeer = () => {
         const beersDB = firebase.database().ref("beersDB");
         const beer = {
-            name: inputName,
-            style: inputStyle,
-            brewery: inputBrewery
+            name: inputName.toLowerCase(),
+            style: inputStyle.toLowerCase(),
+            brewery: inputBrewery.toLowerCase()
         };
 
         beersDB.push(beer);
@@ -56,6 +56,7 @@ const Form = () => {
                     value={inputName}
                     onChange={handleNameChange}
                     placeholder="nom de la binouze"
+                    autocomplete="off"
                 />
                 <ul className="beerSuggestionList">
                     {
