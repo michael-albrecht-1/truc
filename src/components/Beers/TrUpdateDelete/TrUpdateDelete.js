@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import firebase from "../../../utils/firebaseConfig";
+import beerService from '../../../services/beerService';
 
 const TrUpdateDelete = ( {beer} ) => {
     const [update, setUpdate] = useState(false);
@@ -30,13 +31,6 @@ const TrUpdateDelete = ( {beer} ) => {
         setUpdate(false);
     }
 
-    const deleteItem = () => {
-        // pointer id de l'élement à delete
-        let beerDB = firebase.database().ref("beersDB").child(beer.id);
-    
-        beerDB.remove();
-      };
-
     return ( 
         <tr className="truc">
             {
@@ -47,7 +41,7 @@ const TrUpdateDelete = ( {beer} ) => {
                         <td>{beer.brewery.charAt(0).toUpperCase() + beer.brewery.slice(1)}</td>
                         <td> 
                             <button onClick={() => setUpdate(true)}>&#9998;</button>
-                            <button onClick={deleteItem}>&#128465;</button>
+                            <button onClick={beerService.delete}>&#128465;</button>
                         </td>
                     </>
                 )

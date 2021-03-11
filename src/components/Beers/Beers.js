@@ -24,23 +24,6 @@ const Beers = () => {
         <div className="beer">
             <h1>Bières</h1>
             <Form />
-            <table className="beerList">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>style</th>
-                        <th>brasserie</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                {
-                    beerList && beerList.map( (beer, index) => {
-                        return <TrUpdateDelete beer={beer} key={index} />
-                    }) 
-                }
-                </tbody>
-            </table>
         </div>
     )
 }

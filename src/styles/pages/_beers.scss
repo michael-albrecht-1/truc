@@ -33,26 +33,22 @@
     }
 
     .form {
-        margin-bottom: 2rem;
-        display: grid;
+        font-family: $font-4;
+        font-size: 1.2rem;
         
-        grid-template-columns: 80% 20%;
-        grid-template-rows: 1fr;
         .inputs {
-            grid-column: 1;
             display: flex;
             flex-direction: column;
             border-top: $black solid 2px;
-            border-left: $black solid 2px;
             text-align: left;
             
-            font-family: $font-4;
             input {
                 border:none;
                 border-bottom: $black solid 2px;
                 background-color: transparent;
                 color: $color-3;
                 padding: 10px;
+                font-size: 1.2rem;
             }
             input::placeholder {
                 color: $white;
@@ -69,58 +65,43 @@
             }
             
             .beerSuggestionList {
-                background-color: $black;
+                background-color: #232323;
                 opacity: .8;
                 .beerSuggestion {
+                    display: flex;
                     border:none;
                     border-bottom: $black solid 2px;
-                    background-color: transparent;
-                    padding: 10px;
+                    #beerNameSugession{
+                        width: 50%;
+                        padding: 10px;                        
+                    }
+                    #beerBrewerySugession{
+                        width: 50%;
+                        padding: 10px;
+                        border-left: solid 2px $black;
+                    }
                 }
             }
         }
-        .btn {
-            grid-column: 2;
-            width: 3rem;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            border: none;
-            color: $white;
-            background-color: $black;
-            opacity: .7;
-            border:  solid 1px;
-            padding: .9rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .btn:hover {
-            border: 2px solid $color-1;
-            color: $color-1;
-            box-shadow: 0px 0px 2px 2px $color-3;
-            -webkit-box-shadow: 0px 0px 2px 2px $color-3;
-            -moz-box-shadow: 0px 0px 2px 2px $color-3;
+        .btn-group {
+            display:flex;
+            flex-wrap: wrap;
+            .btn {
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-right:  solid 2px $black;
+            }
+            .btn:hover {
+                border: 2px solid $color-1;
+                color: $color-1;
+                box-shadow: 0px 0px 2px 2px $color-3;
+                -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+                -moz-box-shadow: 0px 0px 2px 2px $color-3;
+            }
         }
     }
 
-    @media screen and (min-width: 600px){
-        .form {
-            width: 80%;
-            margin-left: 10%;
-        }
-    }
 
-    @media screen and (min-width: 800px){
-        .form {
-            width: 60%;
-            margin-left: 20%;
-        }
-    }
-
-    @media screen and (min-width: 1000px){
-        .form {
-            width: 40%;
-            margin-left: 30%;
-        }
-    }
 
 }
