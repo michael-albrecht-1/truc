@@ -9,21 +9,24 @@ const TrUpdateDelete = ( {beer} ) => {
 
     const updateItem = () => {
         let beerDB = firebase.database().ref('beersDB').child(beer.id);
-        if (nameUpdate != null) {
+        if (nameUpdate !== null) {
             beerDB.update({
                 name: nameUpdate.toLowerCase()
-            })
+             })
         }
+
         if (styleUpdate !== null) {
             beerDB.update({
                 style: styleUpdate.toLowerCase()
             })
         }
+
         if (breweryUpdate !== null) {
             beerDB.update({
                 brewery: breweryUpdate.toLowerCase()
             })
         }
+
         setUpdate(false);
     }
 
@@ -55,21 +58,21 @@ const TrUpdateDelete = ( {beer} ) => {
                         <td>
                             <input
                                 type="text"
-                                defaultValue={beer.name}
+                                defaultValue={beer.name.charAt(0).toUpperCase() + beer.name.slice(1)}
                                 onChange={(e) => setNameUpdate(e.target.value)}
                             />
                         </td>
                         <td>
                             <input
                                 type="text"
-                                defaultValue={beer.style}
+                                defaultValue={beer.style.charAt(0).toUpperCase() + beer.style.slice(1)}
                                 onChange={(e) => setStyleUpdate(e.target.value)}
                             />
                         </td>
                         <td>
                             <input
                                 type="text"
-                                defaultValue={beer.brewery}
+                                defaultValue={beer.brewery.charAt(0).toUpperCase() + beer.brewery.slice(1)}
                                 onChange={(e) => setBreweryUpdate(e.target.value)}
                             />
                         </td>

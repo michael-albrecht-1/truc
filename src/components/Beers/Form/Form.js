@@ -27,7 +27,7 @@ const Form = () => {
         const beersDB = firebase.database().ref('beersDB');
 
         beersDB.on('value', (snapshot) => {
-            const inputNameValue =  document.querySelector('#inputName').value;
+            const inputNameValue =  document.querySelector('#inputName').value.toLowerCase();
             let previousList = snapshot.val();
             let list = [];
             if (inputNameValue !== ""){

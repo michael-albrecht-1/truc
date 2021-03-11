@@ -11,8 +11,12 @@ const Navbar = () => {
     return (
         <header className="navbar">
             <div className="header">
-                <div className="logo">
-                    <Link to="/"><img src="../../images/moon2.svg" alt="logo" /></Link>
+                <div className="logoDiv">
+                    <Link to="/"><img 
+                        className="logo"
+                        src="../../images/moon2.svg" 
+                        alt="logo" 
+                    /></Link>
                 </div>
                 <div className="title">
                     <Link to="/">

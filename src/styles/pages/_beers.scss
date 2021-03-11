@@ -63,9 +63,9 @@
                 border: solid 2px $color-1;
                 background-color: $black;
                 opacity: .6;
-                box-shadow: 0px 0px 5px 3px $color-3;
-                -webkit-box-shadow: 0px 0px 5px 3px $color-3;
-                -moz-box-shadow: 0px 0px 5px 3px $color-3;
+                box-shadow: 0px 0px 2px 2px $color-3;
+                -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+                -moz-box-shadow: 0px 0px 2px 2px $color-3;
             }
             
             .beerSuggestionList {
@@ -85,13 +85,20 @@
             writing-mode: vertical-rl;
             text-orientation: mixed;
             border: none;
-            color: $black;
-            background-color: $white;
+            color: $white;
+            background-color: $black;
             opacity: .7;
             border:  solid 1px;
             padding: .9rem;
             font-weight: 600;
             cursor: pointer;
+        }
+        .btn:hover {
+            border: 2px solid $color-1;
+            color: $color-1;
+            box-shadow: 0px 0px 2px 2px $color-3;
+            -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+            -moz-box-shadow: 0px 0px 2px 2px $color-3;
         }
     }
 

@@ -8,17 +8,20 @@
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 3rem;
-        .logo {
+        .logoDiv {
             border-bottom: $black 2px solid;
             padding: 2rem;
             display: flex;
             justify-content: center;
-            img {
+            .logo {
                 min-width: 150px;
                 max-width: 200px;
+                transform: rotate(-60deg);
+                
             }
-            img:hover {
-                color: red;
+            
+            .logo:hover {
+                transform: rotate(-62deg);
             }
         }
         .title {
@@ -103,11 +106,15 @@
             flex-wrap: nowrap;
             justify-content: space-between;
             margin-bottom: 0;
-            .logo {
+            .logoDiv {
                 border-bottom: none;
                 border-right: $black 2px solid;
-                img {
+                .logo {
                     height: 100%;
+                    transition: rotate 1s;
+                }
+                .logo:hover {
+                    rotate: 1 -0.5 1 180deg;
                 }
             }
             .title {
@@ -161,7 +168,7 @@
                 }
                 li:hover{
                     a {
-                        color: red;
+                        color: $color-1;
                     }
                 }
                 a {
