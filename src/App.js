@@ -51,7 +51,8 @@ function App() {
                 </Router>
             ) : (
                 <div className="container">
-                    <h1>Connexion</h1>
+                    <h1>Le truc que j'préfère</h1>
+                    <h2>Connexion</h2>
                     <StyledFirebaseAuth
                         uiConfig={uiConfig}
                         firebaseAuth={firebase.auth()}

@@ -5,10 +5,11 @@ $font-2: 'Dosis', sans-serif;
 $font-3: 'Josefin Sans', serif;
 $font-4: 'Roboto', sans-serif;
 
-$color-1: #61dafb;
-$color-2: #282c34;
-$color-3: rgb(99, 164, 233);
-$color-4: #4FEDD2;
+$color-1: #ecc163;
+// $color-1: #61dafb;
+$color-2: #ebb33c;
+$color-3: #e6a00b;
+$color-4: #d49409;
 $color-5: #36D0EA;
 $white: #ddd;
 $black: rgb(20, 20, 20);
@@ -37,6 +38,13 @@ body {
 h1 {
     margin: 2rem 0;
     font-family: $font-4;
+    text-align: center;
+}
+h2 {
+    margin: 2rem 0;
+    font-family: $font-4;
+    font-size: 1.6rem;
+    text-align: center;
 }
 button {
   cursor: pointer;
@@ -53,6 +61,10 @@ a {
 a:visited {
   color:$black;
 }
+.container {
+    border: $black 2px solid;
+}
+
 .home, .beer {
   display: flex;
   margin: 0;

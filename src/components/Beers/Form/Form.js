@@ -1,24 +1,50 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import firebase from '../../../utils/firebaseConfig';
 
 const Form = () => {
-    const [name, setName] = useState('');
-    const [style, setStyle] = useState('');
-    const [brewery, setBrewery] = useState('');
+    const [inputName, setInputName] = useState('');
+    const [inputStyle, setInputStyle] = useState('');
+    const [inputBrewery, setInputBrewery] = useState('');
+
+    const [beerList, setBeerList] = useState([]);
 
     const createBeer = () => {
         const beersDB = firebase.database().ref("beersDB");
         const beer = {
-            name,
-            style,
-            brewery
+            name: inputName,
+            style: inputStyle,
+            brewery: inputBrewery
         };
 
         beersDB.push(beer);
 
-        setName('');
-        setStyle('');
-        setBrewery('');
+        setInputName('');
+        setInputStyle('');
+        setInputBrewery('');
+    }
+
+    useEffect( () => {
+        const beersDB = firebase.database().ref('beersDB');
+
+        beersDB.on('value', (snapshot) => {
+            const inputNameValue =  document.querySelector('#inputName').value;
+            let previousList = snapshot.val();
+            let list = [];
+            if (inputNameValue !== ""){
+                for (let id in previousList) {
+                    let findName = previousList[id].name.search(inputNameValue);
+                    if (findName === 0){
+                        list.push({id, ...previousList[id]});
+                    }
+                }
+            }
+            setBeerList(list);
+        });
+    }, [inputName]);
+    
+
+    const handleNameChange = (e) => {
+        return setInputName(e.currentTarget.value);
     }
 
     return (
@@ -26,20 +52,34 @@ const Form = () => {
             <div className="inputs">
                 <input 
                     type="text"
-                    value={name}
-                    onChange={(e) => setName(e.currentTarget.value)}
+                    id="inputName"
+                    value={inputName}
+                    onChange={handleNameChange}
                     placeholder="nom de la binouze"
                 />
+                <ul className="beerSuggestionList">
+                    {
+                        beerList && beerList.map( (beer, index) => {
+                            return (
+                                <li 
+                                    className="beerSuggestion" 
+                                    key={index}>
+                                        {beer.name}
+                                </li>
+                            )
+                        })  
+                    }
+                </ul>
                 <input 
                     type="text"
-                    value={style}
-                    onChange={(e) => setStyle(e.currentTarget.value)}
+                    value={inputStyle}
+                    onChange={(e) => setInputStyle(e.currentTarget.value)}
                     placeholder="style de la binouze"
                 />
                 <input 
                     type="text"
-                    value={brewery}
-                    onChange={(e) => setBrewery(e.currentTarget.value)}
+                    value={inputBrewery}
+                    onChange={(e) => setInputBrewery(e.currentTarget.value)}
                     placeholder="brasserie de la binouze"
                 />
             </div>
