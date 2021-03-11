@@ -1,3 +1,9 @@
 .home {
+    flex-direction: column;
     color: $color-1;
+
+    ul {
+        text-align: left;
+        margin: 0 2rem 3rem;
+    }
 }

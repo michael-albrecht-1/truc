@@ -22,7 +22,7 @@ const Beers = () => {
 
     return (
         <div className="beer">
-            <h1>Bières !</h1>
+            <h1>Bières</h1>
             <Form />
             <table className="beerList">
                 <thead>

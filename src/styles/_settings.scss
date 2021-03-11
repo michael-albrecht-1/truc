@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap&family=Roboto:wght@400;900&display=swap');
 
 $font-1: 'Nova Round', cursive;
 $font-2: 'Dosis', sans-serif;
 $font-3: 'Josefin Sans', serif;
+$font-4: 'Roboto', sans-serif;
 
 $color-1: #61dafb;
 $color-2: #282c34;
@@ -35,6 +36,7 @@ body {
 }
 h1 {
     margin: 2rem 0;
+    font-family: $font-4;
 }
 button {
   cursor: pointer;
