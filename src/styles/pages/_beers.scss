@@ -9,12 +9,13 @@
     .beerList {
         text-align: center;
         border-spacing: 0;
+        width: 100%;
     }
     
     .beerList {
         th, td {
             padding: 10px;
-            border: 1px solid $black;
+            border-top: 2px solid $black;
         }
     
         .truc button {
@@ -28,7 +29,7 @@
         }
     
         .truc input {
-            background-color: $black;
+            background-color: transparent;
             border: $color-1 solid 1px;
             color: $color-1;
             padding: 6px;
@@ -36,31 +37,47 @@
     }
 
     .form {
-        display: flex;
-        flex-direction: column;
         margin-bottom: 2rem;
-
-        input {
-            background-color: transparent;
-            border: $white solid 1px;
-            color: #61dafb;
-            margin-bottom: 1em;
-            padding: 10px;
-            font-weight: 600;
-            text-align: center;
-        }
+        display: grid;
         
-        input::placeholder {
-            color: $white;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 1fr;
+        .inputs {
+            grid-column: 1;
+            display: flex;
+            flex-direction: column;
+            border-top: $black solid 2px;
+            border-left: $black solid 2px;
+            input {
+                border:none;
+                border-bottom: $black solid 2px;
+                background-color: transparent;
+                color: #61dafb;
+                padding: 10px;
+                font-weight: 600;
+                text-align: center;
+            }
+            input::placeholder {
+                color: $white;
+            }
+            input:focus {
+                outline:none;
+                border: $color-1 solid 2px;
+            }
         }
-    
-        button {
+        .btn {
+            grid-column: 2;
+            width: 3rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
             border: none;
-            color: $color-1;
-            background-color: transparent;
-            border: #61dafb solid 1px;
-            padding: 10px;
+            color: $black;
+            background-color: $white;
+            opacity: .8;
+            border:  solid 1px;
+            padding: .9rem;
             font-weight: 600;
+            cursor: pointer;
         }
     }
 

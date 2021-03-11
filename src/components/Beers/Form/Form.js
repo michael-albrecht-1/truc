@@ -23,25 +23,29 @@ const Form = () => {
 
     return (
         <div className="form">
-            <input 
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.currentTarget.value)}
-                placeholder="nom de la binouze"
-            />
-            <input 
-                type="text"
-                value={style}
-                onChange={(e) => setStyle(e.currentTarget.value)}
-                placeholder="style de la binouze"
-            />
-            <input 
-                type="text"
-                value={brewery}
-                onChange={(e) => setBrewery(e.currentTarget.value)}
-                placeholder="brasserie de la binouze"
-            />
-            <button onClick={createBeer}>Valider</button>
+            <div className="inputs">
+                <input 
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.currentTarget.value)}
+                    placeholder="nom de la binouze"
+                />
+                <input 
+                    type="text"
+                    value={style}
+                    onChange={(e) => setStyle(e.currentTarget.value)}
+                    placeholder="style de la binouze"
+                />
+                <input 
+                    type="text"
+                    value={brewery}
+                    onChange={(e) => setBrewery(e.currentTarget.value)}
+                    placeholder="brasserie de la binouze"
+                />
+            </div>
+            <div className="btn" onClick={createBeer}>
+                Valider
+            </div>        
         </div>
     )}
 
