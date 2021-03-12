@@ -30,13 +30,23 @@ const beerService = {
 
     delete: (id) => {
         let beerDB = firebase.database().ref("beersDB").child(id);
-        return beerDB.remove();
+        beerDB.remove();
     },
 
     add: (beer) => {
         const beersDB = firebase.database().ref("beersDB");
 
         beersDB.push(beer);
+    },
+
+    update: (id, beer) => {
+        let beerDB = firebase.database().ref("beerDB").child(id);
+
+        let res = beerDB.update({beer})
+
+        console.log(id);
+        console.log(beer);
+        console.log(res);
     }
 
 }

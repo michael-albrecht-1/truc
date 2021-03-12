@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import firebase from '../../utils/firebaseConfig';
 import beerService from '../../services/beerService';
 
 
@@ -12,36 +11,44 @@ const Beers = () => {
     const [selectedBeerId, setSelectedBeerId] = useState(null);
 
     const [filteredBeersList, setFilteredBeersList] = useState([]);
+    
+        useEffect( () => {
+                if (selectedBeerId === null ) {
+                    const inputNameValue =  document.querySelector('#inputName').value.toLowerCase();
+                    let previousList = beerService.findAll();
+                    let list = [];
+                    if (inputNameValue !== ""){
+                        for (let id in previousList) {
+                            let findName = previousList[id].name.search(inputNameValue);
+                            if (findName === 0){
+                                list.push({id, ...previousList[id]});
+                            }
+                        }
+                    }
+                    setFilteredBeersList(list);
+                }
+        }, [inputName]);
 
-    const createBeer = () => {
+    const handleFormSubmit = () => {
         const beer = {
             name: inputName.toLowerCase(),
             style: inputStyle.toLowerCase(),
             brewery: inputBrewery.toLowerCase()
-        };
-        beerService.add(beer);
+        };  
+
+        if ( selectedBeerId === null) {
+            beerService.add(beer);
+        } else {
+            beerService.update(selectedBeerId, beer)
+        }
+
         setInputName('');
         setInputStyle('');
         setInputBrewery('');
-    }
 
-    useEffect( () => {
-            if (selectedBeerId === null ) {
-                const inputNameValue =  document.querySelector('#inputName').value.toLowerCase();
-                let previousList = beerService.findAll();
-                let list = [];
-                if (inputNameValue !== ""){
-                    for (let id in previousList) {
-                        let findName = previousList[id].name.search(inputNameValue);
-                        if (findName === 0){
-                            list.push({id, ...previousList[id]});
-                        }
-                    }
-                }
-                setFilteredBeersList(list);
-            }
-    }, [inputName]);
-    
+        setSelectedBeerId(null);
+        setFilteredBeersList([]);
+    }     
 
     const handleNameChange = (e) => {
         return setInputName(e.currentTarget.value);
@@ -67,7 +74,7 @@ const Beers = () => {
     }
 
     const deleteBeer = () => {
-        beerService.delete(selectedBeerId)
+        beerService.delete(selectedBeerId);
         resetform();
     }   
 
@@ -106,7 +113,7 @@ const Beers = () => {
                                             {beer.name}
                                         </div>
                                         <div id="beerBrewerySugession">
-                                            <i class="fas fa-industry"></i>
+                                            <i className="fas fa-industry"></i>
                                             {beer.brewery}
                                         </div>                                    
                                     </li>
@@ -136,16 +143,16 @@ const Beers = () => {
                     </div>
                 </div>
                 <div className="btn-group">
-                    <div className="btn btn-submit" onClick={createBeer}>
-                        <i class="fas fa-check"></i>
+                    <div className="btn btn-submit" onClick={handleFormSubmit}>
+                        <i className="fas fa-check"></i>
                     </div>  
                     <div className="btn btn-cancel" onClick={resetform}>
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </div>      
                     {
                         ( selectedBeerId !== null ) && (
                             <div className="btn btn-delete" onClick={deleteBeer}>
-                                <i class="far fa-trash-alt"></i>
+                                <i className="far fa-trash-alt"></i>
                             </div>  
                         )
                     }
