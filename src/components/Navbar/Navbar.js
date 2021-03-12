@@ -42,14 +42,14 @@ const Navbar = () => {
                             <>
                                 <li>
                                     <Link to="/profile">
-                                        <i class="fas fa-cog"></i>Paramétrer mon profile
+                                        <i class="fas fa-cog"></i>Gérer mon profile
                                     </Link>
                                 </li>
                                 <li onClick={() => firebase.auth().signOut()}>
                                     <i class="fas fa-sign-out-alt"></i>Se déconnecter  
                                 </li>
                                 <li onClick={() => setAreProfilActionsDisplayed(false)}>
-                                    <i class="fas fa-window-close"></i>Fermer
+                                    <i class="fas fa-times"></i>Fermer
                                 </li>
                             </>
                         )

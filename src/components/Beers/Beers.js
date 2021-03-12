@@ -138,10 +138,10 @@ const Beers = () => {
                 </div>
                 <div className="btn-group">
                     <div className="btn btn-submit" onClick={createBeer}>
-                        Valider
+                        <i class="fas fa-check"></i>
                     </div>  
                     <div className="btn btn-cancel" onClick={resetform}>
-                        Annuler
+                        <i class="fas fa-times"></i>
                     </div>      
                 </div>
             </div>
