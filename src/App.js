@@ -10,6 +10,7 @@ import firebase from "./utils/firebaseConfig";
 
 import Home from './components/Home/Home';
 import Beers from './components/Beers/Beers';
+import Profile from './components/Profile/Profile';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
                     <Switch>
                         <Route path="/beers">
                             <Beers />
+                        </Route>
+                        <Route path="/profile">
+                            <Profile />
                         </Route>
                         <Route path="/">
                             <Home />

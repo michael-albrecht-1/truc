@@ -1,68 +1,57 @@
-.beer {
+.beerContent {
     display: flex;
     flex-direction: column;
         
-    .beerList {
-        text-align: center;
-        border-spacing: 0;
-        width: 100%;
-    }
     
-    .beerList {
-        th, td {
-            padding: 10px;
-            border-top: 2px solid $black;
-        }
-    
-        .truc button {
-            width: 2.5em;
-            padding: 8px;
-            margin: 2px 4px;
-            background-color: transparent;
-            color: $white;
-            border: $black solid 1px;
-            border-radius: 4px;
-        }
-    
-        .truc input {
-            background-color: transparent;
-            border: $color-1 solid 1px;
-            color: $color-1;
-            padding: 6px;
-        }
-    }
-
     .form {
         font-family: $font-4;
         font-size: 1.2rem;
+        margin-top: 4rem;
         
         .inputs {
             display: flex;
             flex-direction: column;
             border-top: $black solid 2px;
             text-align: left;
-            
-            input {
-                border:none;
+            .form-group {
                 border-bottom: $black solid 2px;
-                background-color: transparent;
-                color: $color-3;
-                padding: 10px;
-                font-size: 1.2rem;
+                display: flex;
+                flex-wrap: wrap;
+
+                label {
+                    border-bottom: $black dotted 2px;
+                    padding: 10px 2rem;
+                    width: 100%;
+                }
+                input {
+                    border:none;
+                    background-color: transparent;
+                    width: 100%;
+                    color: $color-3;
+                    padding: 10px 2rem;
+                    font-size: 1.2rem;
+                }
+                input::placeholder {
+                    color: $white;
+                }
+                input:focus {
+                    z-index: 10;
+                    outline:none;
+                    border: solid 2px $color-1;
+                    background-color: $black;
+                    opacity: .6;
+                    box-shadow: 0px 0px 2px 2px $color-3;
+                    -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+                    -moz-box-shadow: 0px 0px 2px 2px $color-3;
+                }
+                input:hover {
+                    color: $color-1;
+                    box-shadow: 0px 0px 2px 2px $color-3;
+                    -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+                    -moz-box-shadow: 0px 0px 2px 2px $color-3;
+                }
             }
-            input::placeholder {
-                color: $white;
-            }
-            input:focus {
-                z-index: 10;
-                outline:none;
-                border: solid 2px $color-1;
-                background-color: $black;
-                opacity: .6;
-                box-shadow: 0px 0px 2px 2px $color-3;
-                -webkit-box-shadow: 0px 0px 2px 2px $color-3;
-                -moz-box-shadow: 0px 0px 2px 2px $color-3;
-            }
+            
             
             .beerSuggestionList {
                 background-color: #232323;
@@ -73,25 +62,32 @@
                     border-bottom: $black solid 2px;
                     #beerNameSugession{
                         width: 50%;
-                        padding: 10px;    
+                        padding: 10px 1rem;    
                         i {
                             margin-right: 1rem;
                         }                    
                     }
                     #beerBrewerySugession{
                         width: 50%;
-                        padding: 10px;
+                        padding: 10px 1rem;
                         border-left: solid 2px $black;    
                         i {
                             margin-right: 1rem;
                         }    
                     }
                 }
+                .beerSuggestion:hover {
+                    color: $color-1;
+                    box-shadow: 0px 0px 2px 2px $color-3;
+                    -webkit-box-shadow: 0px 0px 2px 2px $color-3;
+                    -moz-box-shadow: 0px 0px 2px 2px $color-3;
+                }
             }
         }
         .btn-group {
             display:flex;
             flex-wrap: wrap;
+            border-bottom: solid 2px $black;
             .btn {
                 border: none;
                 padding: 10px;
@@ -107,7 +103,4 @@
             }
         }
     }
-
-
-
 }

@@ -35,12 +35,13 @@ const Navbar = () => {
                 <ul className="profil">
                     {
                        (!areProfilActionsDisplayed) && (
-                        <li onClick={() => setAreProfilActionsDisplayed(true)}>Profil</li>
+                        <li onClick={() => setAreProfilActionsDisplayed(true)}><i class="far fa-user"></i></li>
                     ) 
                     }
                     { (areProfilActionsDisplayed) && (
                             <>
-                                <li onClick={() => firebase.auth().signOut()}>Déconnecter  {firebase.auth().currentUser.displayName}</li>
+                                <li><Link to="/profile">Profile</Link></li>
+                                <li onClick={() => firebase.auth().signOut()}>Se déconnecter  </li>
                                 <li onClick={() => setAreProfilActionsDisplayed(false)}>Fermer</li>
                             </>
                         )

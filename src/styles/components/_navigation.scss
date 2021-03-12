@@ -1,13 +1,10 @@
 .navbar {
     border-top: $black 2px solid;
-    border-left: $black 2px solid;
-    border-right: $black 2px solid;
 
     .header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 3rem;
         .logoDiv {
             border-bottom: $black 2px solid;
             padding: 2rem;
@@ -16,12 +13,12 @@
             .logo {
                 min-width: 150px;
                 max-width: 200px;
-                transform: rotate(-60deg);
+                transform: rotate(5deg);
                 
             }
             
             .logo:hover {
-                transform: rotate(-62deg);
+                transform: rotate(7deg);
             }
         }
         .title {
@@ -53,17 +50,20 @@
             display: flex;
             flex-direction: column;
 
-            li{
+            li {
                 width: 100%;
                 border-bottom: $black 2px solid;
-                padding: .6rem;
+                padding: 10px 2rem;
                 font-family: $font-4;
                 font-weight: 400;
                 font-size: 1.2rem;
-                text-align: center;
+                text-align: left;
                 cursor: pointer;
+                a {
+                    color: $white;
+                }
             }
-            li:hover{
+            li:hover , a:hover{
                 color: $color-1;
             }
         }
@@ -76,12 +76,12 @@
             flex-wrap: wrap;
             list-style-type: none;
             li {
-                padding: 16px;
-                border-top: $black 2px solid;
+                padding: 10px 2rem;
+                border-bottom: $black 2px solid;
                 font-family: $font-4;
                 font-weight: 400;
                 font-size: 1.2rem;
-                text-align: center;
+                text-align: left;
                 background-color: transparent;
                 cursor: pointer;
             }
@@ -105,27 +105,14 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
-            margin-bottom: 0;
             .logoDiv {
                 border-bottom: none;
                 border-right: $black 2px solid;
-                .logo {
-                    height: 100%;
-                    transition: rotate 1s;
-                }
-                .logo:hover {
-                    rotate: 1 -0.5 1 180deg;
-                }
             }
             .title {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                h1 {
-                    font-size: 3rem;
-                    font-family: $font-4;
-                    text-align: center;
-                }
             }
             .profil {
                 border-top: none;
@@ -135,17 +122,8 @@
                 flex-direction: column;
     
                 li{
-                    width: 100%;
                     border-bottom: $black 2px solid;
-                    padding: .6rem;
-                    font-family: $font-4;
-                    font-weight: 400;
-                    font-size: 1.2rem;
                     text-align: center;
-                    cursor: pointer;
-                }
-                li:hover{
-                    color: $color-1;
                 }
             }
         }
@@ -156,24 +134,9 @@
                 list-style-type: none;
                 border-top: $black 2px solid;
                 li {
-                    padding: 16px;
                     border-top: none;
                     border-right: $black 2px solid;
-                    font-family: $font-4;
-                    font-weight: 400;
-                    font-size: 1.2rem;
                     text-align: center;
-                    background-color: transparent;
-                    cursor: pointer;
-                }
-                li:hover{
-                    a {
-                        color: $color-1;
-                    }
-                }
-                a {
-                    color: $white;
-                    text-decoration: none;
                 }
             }
         }
