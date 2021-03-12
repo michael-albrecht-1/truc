@@ -62,6 +62,9 @@
                 a {
                     color: $white;
                 }
+                i {
+                    margin-right: 1rem;
+                }
             }
             li:hover , a:hover{
                 color: $color-1;
@@ -84,6 +87,9 @@
                 text-align: left;
                 background-color: transparent;
                 cursor: pointer;
+                i {
+                    margin-right: 1rem;
+                }
             }
             li:hover{
                 a {

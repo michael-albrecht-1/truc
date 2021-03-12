@@ -35,14 +35,22 @@ const Navbar = () => {
                 <ul className="profil">
                     {
                        (!areProfilActionsDisplayed) && (
-                        <li onClick={() => setAreProfilActionsDisplayed(true)}><i class="far fa-user"></i></li>
+                        <li onClick={() => setAreProfilActionsDisplayed(true)}><i class="far fa-user"></i>Profile</li>
                     ) 
                     }
                     { (areProfilActionsDisplayed) && (
                             <>
-                                <li><Link to="/profile">Profile</Link></li>
-                                <li onClick={() => firebase.auth().signOut()}>Se déconnecter  </li>
-                                <li onClick={() => setAreProfilActionsDisplayed(false)}>Fermer</li>
+                                <li>
+                                    <Link to="/profile">
+                                        <i class="fas fa-cog"></i>Paramétrer mon profile
+                                    </Link>
+                                </li>
+                                <li onClick={() => firebase.auth().signOut()}>
+                                    <i class="fas fa-sign-out-alt"></i>Se déconnecter  
+                                </li>
+                                <li onClick={() => setAreProfilActionsDisplayed(false)}>
+                                    <i class="fas fa-window-close"></i>Fermer
+                                </li>
                             </>
                         )
                     }
@@ -52,10 +60,14 @@ const Navbar = () => {
             <nav className="links">
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/">
+                            <i class="fas fa-home"></i>Accueil
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/beers">Bières</Link>
+                        <Link to="/beers">
+                            <i className="fas fa-beer"></i>Bières
+                        </Link>
                     </li>
                 </ul>
             </nav>

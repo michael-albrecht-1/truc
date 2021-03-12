@@ -74,6 +74,9 @@ const Beers = () => {
 
     return (
         <div className="beerContent">
+            <h1>
+            <i className="fas fa-beer"></i>Radio bière foot !
+            </h1>
             <div className="form">
                 <div className="inputs">
                     <div className="form-group">

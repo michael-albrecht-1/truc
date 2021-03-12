@@ -3,7 +3,12 @@ import firebase from '../../utils/firebaseConfig';
 
 const profile = () => {
     return (
-        <h1>Profile de {firebase.auth().currentUser.displayName}</h1>
+        <div className="profileContent">
+            <h1>
+                <i class="fas fa-cog"></i>
+                Profile de {firebase.auth().currentUser.displayName}
+            </h1>
+        </div>
     );
 };
 
