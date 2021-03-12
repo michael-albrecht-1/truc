@@ -9,21 +9,17 @@ const Beers = () => {
     const [inputStyle, setInputStyle] = useState('');
     const [inputBrewery, setInputBrewery] = useState('');
 
-    const [selectedBeer, setSelectedBeer] = useState([]);
     const [selectedBeerId, setSelectedBeerId] = useState(null);
 
     const [filteredBeersList, setFilteredBeersList] = useState([]);
 
     const createBeer = () => {
-        const beersDB = firebase.database().ref("beersDB");
         const beer = {
             name: inputName.toLowerCase(),
             style: inputStyle.toLowerCase(),
             brewery: inputBrewery.toLowerCase()
         };
-
-        beersDB.push(beer);
-
+        beerService.add(beer);
         setInputName('');
         setInputStyle('');
         setInputBrewery('');
@@ -53,7 +49,6 @@ const Beers = () => {
 
     const handleSelectBeer = (e) => {
         let beer = beerService.findById(e.currentTarget.id);
-        setSelectedBeer(beer)
         setSelectedBeerId(e.currentTarget.id)
         setFilteredBeersList([])
 
@@ -67,10 +62,14 @@ const Beers = () => {
         setInputStyle('');
         setInputBrewery('');
 
-        setSelectedBeer('');
         setSelectedBeerId(null);
         setFilteredBeersList([]);
     }
+
+    const deleteBeer = () => {
+        beerService.delete(selectedBeerId)
+        resetform();
+    }   
 
     return (
         <div className="beerContent">
@@ -143,6 +142,13 @@ const Beers = () => {
                     <div className="btn btn-cancel" onClick={resetform}>
                         <i class="fas fa-times"></i>
                     </div>      
+                    {
+                        ( selectedBeerId !== null ) && (
+                            <div className="btn btn-delete" onClick={deleteBeer}>
+                                <i class="far fa-trash-alt"></i>
+                            </div>  
+                        )
+                    }
                 </div>
             </div>
         </div>

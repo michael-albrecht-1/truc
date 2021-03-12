@@ -38,7 +38,7 @@
                     font-size: 1.2rem;
                 }
                 input::placeholder {
-                    color: $white;
+                    color: rgb(145, 142, 142);
                 }
                 input:focus {
                     z-index: 10;
@@ -95,6 +95,7 @@
             flex-wrap: wrap;
             border-bottom: solid 2px $black;
             .btn {
+                width: 3rem;
                 border: none;
                 padding: 10px;
                 cursor: pointer;

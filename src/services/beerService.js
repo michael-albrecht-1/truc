@@ -33,6 +33,12 @@ const beerService = {
         return beerDB.remove();
     },
 
+    add: (beer) => {
+        const beersDB = firebase.database().ref("beersDB");
+
+        beersDB.push(beer);
+    }
+
 }
 
 export default beerService
