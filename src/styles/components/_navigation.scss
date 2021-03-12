@@ -1,151 +1,151 @@
 .navbar {
-    border-top: $black 2px solid;
+  border-top: $black 2px solid;
 
-    .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .logoDiv {
-            border-bottom: $black 2px solid;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            .logo {
-                min-width: 150px;
-                max-width: 200px;
-                transform: rotate(5deg);
-                
-            }
-            
-            .logo:hover {
-                transform: rotate(7deg);
-            }
-        }
-        .title {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            .date {
-                margin-top: 1rem;
-                text-align: center;
-            }
-            a {
-                color: $white;
-            }
-            h1 {
-                text-align: center;
-                color: $black;
-                font-size: 3rem;
-                font-family: $font-4;
-                text-align: center;
-            }
-        }
-        .title:hover {
-            a {
-                color: $color-1;
-            }
-        }
-        .profil {
-            border-top: $black 2px solid;
-            display: flex;
-            flex-direction: column;
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logoDiv {
+      border-bottom: $black 2px solid;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      .logo {
+        min-width: 150px;
+        max-width: 200px;
+        transform: rotate(5deg);
+      }
 
-            li {
-                width: 100%;
-                border-bottom: $black 2px solid;
-                padding: 10px 2rem;
-                font-family: $font-4;
-                font-weight: 400;
-                font-size: 1.2rem;
-                text-align: left;
-                cursor: pointer;
-                a {
-                    color: $white;
-                }
-                i {
-                    margin-right: 1rem;
-                }
-            }
-            li:hover , a:hover{
-                color: $color-1;
-            }
-        }
+      .logo:hover {
+        transform: rotate(7deg);
+      }
     }
-    
-    .links {
-        ul {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            list-style-type: none;
-            li {
-                padding: 10px 2rem;
-                border-bottom: $black 2px solid;
-                font-family: $font-4;
-                font-weight: 400;
-                font-size: 1.2rem;
-                text-align: left;
-                background-color: transparent;
-                cursor: pointer;
-                i {
-                    margin-right: 1rem;
-                }
-            }
-            li:hover{
-                a {
-                    color: $color-1;
-                }
-            }
-            a {
-                color: $white;
-                text-decoration: none;
-            }
-        }
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .date {
+        margin-top: 1rem;
+        text-align: center;
+      }
+      a {
+        color: $white;
+      }
+      h1 {
+        text-align: center;
+        color: $black;
+        font-size: 3rem;
+        font-family: $font-4;
+        text-align: center;
+      }
     }
+    .title:hover {
+      a {
+        color: $color-1;
+      }
+    }
+    .profil {
+      border-top: $black 2px solid;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        width: 100%;
+        border-bottom: $black 2px solid;
+        padding: 10px 2rem;
+        font-family: $font-4;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: left;
+        cursor: pointer;
+        a {
+          color: $white;
+        }
+        i {
+          margin-right: 1rem;
+        }
+      }
+      li:hover,
+      a:hover {
+        color: $color-1;
+      }
+    }
+  }
+
+  .links {
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      list-style-type: none;
+      li {
+        padding: 10px 2rem;
+        border-bottom: $black 2px solid;
+        font-family: $font-4;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: left;
+        background-color: transparent;
+        cursor: pointer;
+        i {
+          margin-right: 1rem;
+        }
+      }
+      li:hover {
+        a {
+          color: $color-1;
+        }
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 640px) {
-    .navbar {
-        .header {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            .logoDiv {
-                border-bottom: none;
-                border-right: $black 2px solid;
-            }
-            .title {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            .profil {
-                border-top: none;
-                border-left: $black 2px solid;
-                width: 20%;
-                display: flex;
-                flex-direction: column;
-    
-                li{
-                    border-bottom: $black 2px solid;
-                    padding: 10px .4rem;
-                    text-align: center;
-                }
-            }
+  .navbar {
+    .header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .logoDiv {
+        border-bottom: none;
+        border-right: $black 2px solid;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .profil {
+        border-top: none;
+        border-left: $black 2px solid;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+
+        li {
+          border-bottom: $black 2px solid;
+          padding: 10px 0.4rem;
+          text-align: center;
         }
-        .links {
-            ul {
-                display: flex;
-                flex-direction: row;
-                list-style-type: none;
-                border-top: $black 2px solid;
-                li {
-                    border-top: none;
-                    border-right: $black 2px solid;
-                    text-align: center;
-                }
-            }
-        }
+      }
     }
+    .links {
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        border-top: $black 2px solid;
+        li {
+          border-top: none;
+          border-right: $black 2px solid;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

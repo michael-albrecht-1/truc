@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap&family=Roboto:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap&family=Roboto:wght@400;900&display=swap");
 
-$font-1: 'Nova Round', cursive;
-$font-2: 'Dosis', sans-serif;
-$font-3: 'Josefin Sans', serif;
-$font-4: 'Roboto', sans-serif;
+$font-1: "Nova Round", cursive;
+$font-2: "Dosis", sans-serif;
+$font-3: "Josefin Sans", serif;
+$font-4: "Roboto", sans-serif;
 
 $color-1: #ecc163;
 // $color-1: #61dafb;
 $color-2: #ebb33c;
 $color-3: #e6a00b;
 $color-4: #d49409;
-$color-5: #36D0EA;
+$color-5: #36d0ea;
 $white: #ddd;
 $black: rgb(20, 20, 20);
 
@@ -21,7 +21,7 @@ $minHeight: 95vh;
 @mixin verticalCenter {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 * {
   box-sizing: border-box;
@@ -36,15 +36,15 @@ body {
   background: #fffcf9 url(../images/ricepaper-charcoal.jpg);
 }
 h1 {
-    margin: 2rem 0;
-    font-family: $font-4;
-    text-align: center;
+  margin: 2rem 0;
+  font-family: $font-4;
+  text-align: center;
 }
 h2 {
-    margin: 2rem 0;
-    font-family: $font-4;
-    font-size: 1.6rem;
-    text-align: center;
+  margin: 2rem 0;
+  font-family: $font-4;
+  font-size: 1.6rem;
+  text-align: center;
 }
 button {
   cursor: pointer;
@@ -59,18 +59,19 @@ a {
   cursor: pointer;
 }
 a:visited {
-  color:$black;
+  color: $black;
 }
 .container {
-    border: $black 2px solid;
+  border: $black 2px solid;
 }
 
-.home, .beerContent {
+.home,
+.beerContent {
   display: flex;
   margin: 0;
   text-align: center;
 
-  @media screen and (max-width: 850px){
+  @media screen and (max-width: 850px) {
     display: block !important;
   }
 }
