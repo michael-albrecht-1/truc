@@ -24,7 +24,7 @@ const Header = () => {
   const date = new Date();
 
     return (
-        <div className="header">
+      <div className="header">
         <div className="logoDiv">
           <Link to="/">
             <img className="logo" src="../../images/moon2.svg" alt="logo" />
