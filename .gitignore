@@ -9,7 +9,7 @@
 /coverage
 
 # config
-/src/utils
+#/src/utils
 
 # production
 /build
