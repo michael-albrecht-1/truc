@@ -29,8 +29,6 @@ $minHeight: 95vh;
   padding: 0;
 }
 body {
-  margin: 1rem auto;
-  max-width: 1200px;
   font-family: $font-1;
   color: $white;
   background: #fffcf9 url(../images/ricepaper-charcoal.jpg);
@@ -70,8 +68,4 @@ a:visited {
   display: flex;
   margin: 0;
   text-align: center;
-
-  @media screen and (max-width: 850px) {
-    display: block !important;
-  }
 }

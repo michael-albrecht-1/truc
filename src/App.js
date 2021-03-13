@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import firebase from "./utils/firebaseConfig";
 
-import Home from "./components/Home/Home";
-import Beers from "./components/Beers/Beers";
-import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
+import Beers from "./components/Beers/Beers";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       {isSignedIn ? (
         <Router>
+          <Header />
           <Navbar />
           <Switch>
             <Route path="/beers">
