@@ -14,7 +14,7 @@ const UserLinks = () => {
     setDisplayedProfileActionsList(initialDisplayedProfileActionsList);
   }
 
-  const [displayedProfileActionsList, setDisplayedProfileActionsList] = useState(initialDisplayedProfileActionsList); 
+  const [displayedProfileActionsList, setDisplayedProfileActionsList] = useState(initialDisplayedProfileActionsList);
 
   const initialProfileActionsList = [
     (
@@ -42,19 +42,19 @@ const UserLinks = () => {
         if (displayedProfileActionsList.length <= initialProfileActionsList.length){
           setDisplayedProfileActionsList(displayedProfileActionsList => [...displayedProfileActionsList, initialProfileActionsList[displayedProfileActionsList.length]]);
         }
-     }, 30);
-       return () => clearInterval(interval); 
+     }, 200);
+       return () => clearInterval(interval);
     }
   }, [areProfileActionsDisplayed, displayedProfileActionsList])
 
-  
+
   return (
       <ul className="profil">
         {!areProfileActionsDisplayed ? (
           <li onClick={() => setAreProfileActionsDisplayed(true)}>
             <i className="far fa-user"></i>Profil
           </li>
-        ) : 
+        ) :
         displayedProfileActionsList
         }
     </ul>
