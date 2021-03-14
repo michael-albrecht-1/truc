@@ -10,10 +10,10 @@ const uiConfig = {
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
   };
-  
+
 const Login = () => {
     return (
-        <div className="container">
+        <div className="login">
           <h1>Le truc que j'préfère</h1>
           <h2>Connexion</h2>
           <StyledFirebaseAuth

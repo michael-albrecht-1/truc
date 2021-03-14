@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import beerService from "../../services/beerService";
+import trucService from "../../services/trucService";
 
 const initialSelectedBeerId = null;
+const beersDB = "beersDB";
 
 const Beers = () => {
   const [inputName, setInputName] = useState("");
@@ -31,7 +32,7 @@ const Beers = () => {
         setFilteredBeersList([]);
       }
       else {
-        setFilteredBeersList(beerService.findAll().filter(el => el.name.match(inputName)));
+        setFilteredBeersList(trucService.findAll(beersDB).filter(el => el.name.match(inputName)));
       }
     }
   }, [inputName, selectedBeerId]);
@@ -44,16 +45,16 @@ const Beers = () => {
     };
 
     if (selectedBeerId === null) {
-      beerService.add(beer);
+      trucService.add(beersDB, beer);
     } else {
-      beerService.update(selectedBeerId, beer);
+      trucService.update(beersDB, selectedBeerId, beer);
     }
 
     resetFormValues();
   };
 
   const handleSelectBeer = (beerId) => {
-    let beer = beerService.findById(beerId);
+    let beer = trucService.findById(beersDB, beerId);
 
     setSelectedBeerId(beerId);
     setFilteredBeersList([]);
@@ -64,7 +65,7 @@ const Beers = () => {
   };
 
   const deleteBeer = () => {
-    beerService.delete(selectedBeerId);
+    trucService.delete(beersDB, selectedBeerId);
     resetFormValues();
   };
 

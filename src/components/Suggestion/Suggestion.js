@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import beerService from "../../services/beerService";
 
+// he we just copied the initial code from Beer component
+
 const initialSelectedBeerId = null;
 
 const Beers = () => {
