@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "./utils/firebaseConfig";
 
 import Home from "./components/Home/Home";
 import Beers from "./components/Beers/Beers";
 import Profile from "./components/Profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
-
-  const uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    ],
-  };
 
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
@@ -46,14 +37,7 @@ function App() {
           </Switch>
         </Router>
       ) : (
-        <div className="container">
-          <h1>Le truc que j'préfère</h1>
-          <h2>Connexion</h2>
-          <StyledFirebaseAuth
-            uiConfig={uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
-        </div>
+        <Login />
       )}
     </div>
   );
