@@ -27,11 +27,12 @@ const Beers = () => {
 
   useEffect(() => {
     if (selectedBeerId === initialSelectedBeerId) {
-      if(!inputName.length) {
+      if (!inputName.length) {
         setFilteredBeersList([]);
-      }
-      else {
-        setFilteredBeersList(beerService.findAll().filter(el => el.name.match(inputName)));
+      } else {
+        setFilteredBeersList(
+          beerService.findAll().filter((el) => el.name.match(inputName))
+        );
       }
     }
   }, [inputName, selectedBeerId]);
@@ -61,11 +62,6 @@ const Beers = () => {
     setInputName(beer.name);
     setInputStyle(beer.style);
     setInputBrewery(beer.brewery);
-  };
-
-  const deleteBeer = () => {
-    beerService.delete(selectedBeerId);
-    resetFormValues();
   };
 
   return (
@@ -136,11 +132,6 @@ const Beers = () => {
           <div className="btn btn-cancel" onClick={resetFormValues}>
             <i className="fas fa-times"></i>
           </div>
-          {selectedBeerId !== null && (
-            <div className="btn btn-delete" onClick={deleteBeer}>
-              <i className="far fa-trash-alt"></i>
-            </div>
-          )}
         </div>
       </div>
     </div>
