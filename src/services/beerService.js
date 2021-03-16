@@ -40,13 +40,9 @@ const beerService = {
   },
 
   update: (id, beer) => {
-    let beerDB = firebase.database().ref("beerDB").child(id);
+    let beerDB = firebase.database().ref("beersDB").child(id);
 
-    let res = beerDB.update({ beer });
-
-    console.log(id);
-    console.log(beer);
-    console.log(res);
+    beerDB.update(beer);
   },
 };
 
