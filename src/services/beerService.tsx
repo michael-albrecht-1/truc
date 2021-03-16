@@ -3,7 +3,7 @@ import firebase from "../utils/firebaseConfig";
 const beerService = {
   findAll: () => {
     const beersDB = firebase.database().ref("beersDB");
-    let list = [];
+    let list: (object)[] = [];
     beersDB.on("value", (snapshot) => {
       let previousList = snapshot.val();
       for (let id in previousList) {
@@ -13,7 +13,7 @@ const beerService = {
     return list;
   },
 
-  findById: (idParam) => {
+  findById: (idParam: string) => {
     const beersDB = firebase.database().ref("beersDB");
     let result = null;
 
@@ -28,19 +28,19 @@ const beerService = {
     return result;
   },
 
-  delete: (id) => {
+  delete: (id:string) => {
     let beerDB = firebase.database().ref("beersDB").child(id);
     beerDB.remove();
   },
 
-  add: (beer) => {
+  add: (beer: object) => {
     const beersDB = firebase.database().ref("beersDB");
 
     beersDB.push(beer);
   },
 
-  update: (id, beer) => {
-    let beerDB = firebase.database().ref("beersDB").child(id);
+  update: (id: string, beer:object) => {
+    let beerDB = firebase.database().ref("beerDB").child(id);
 
     beerDB.update(beer);
   },
