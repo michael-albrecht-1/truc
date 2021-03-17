@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import firebase from "./utils/firebaseConfig";
