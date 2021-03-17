@@ -17,7 +17,7 @@ const months = [
   "Decembre",
 ];
 
-const displayedDate = (date) =>
+const displayedDate = (date: Date) =>
   `Le ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 
 const Navbar = () => {
