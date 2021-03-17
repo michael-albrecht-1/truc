@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
-import beerService from "../../services/beerService";
+import beerService, { Beer } from "../../services/beerService";
 
 const initialSelectedBeerId = null;
+const initialFilteredBeersList: Beer[] = [];
 
 const Beers = () => {
   const [inputName, setInputName] = useState("");
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInputName(e.currentTarget.value);
   };
 
   const [inputStyle, setInputStyle] = useState("");
   const [inputBrewery, setInputBrewery] = useState("");
 
-  const [selectedBeerId, setSelectedBeerId] = useState(initialSelectedBeerId);
+  const [selectedBeerId, setSelectedBeerId] = useState<string | null>(initialSelectedBeerId);
 
-  const [filteredBeersList, setFilteredBeersList] = useState([]);
+  const [filteredBeersList, setFilteredBeersList] = useState(initialFilteredBeersList);
 
   const resetFormValues = () => {
     setInputName("");
@@ -45,7 +46,7 @@ const Beers = () => {
     };
 
     if (selectedBeerId === null) {
-      beerService.add(beer);
+      beerService.add(beer.name, beer.style, beer.brewery);
     } else {
       beerService.update(selectedBeerId, beer);
     }
@@ -53,11 +54,11 @@ const Beers = () => {
     resetFormValues();
   };
 
-  const handleSelectBeer = (beerId) => {
+  const handleSelectBeer = (beerId: string) => {
     let beer = beerService.findById(beerId);
 
     setSelectedBeerId(beerId);
-    setFilteredBeersList([]);
+    setFilteredBeersList(initialFilteredBeersList);
 
     setInputName(beer.name);
     setInputStyle(beer.style);

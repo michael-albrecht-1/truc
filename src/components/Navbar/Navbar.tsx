@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import * as React from "react";
+import { useState } from "react";
 import firebase from "../../utils/firebaseConfig";
 import { Link } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const months = [
   "Decembre",
 ];
 
-const displayedDate = (date) =>
+const displayedDate = (date: Date) =>
   `Le ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 
 const Navbar = () => {
