@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import firebase from "../../utils/firebaseConfig";
 import { Link } from "react-router-dom";
-import { StyledLogoDiv, StyledLogoImg} from "./Header.styles";
+import { StyledLogoDiv, StyledLogoImg} from "./Header.styled";
 
 const months = [
   "Janvier",

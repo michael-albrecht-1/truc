@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { settings } from '../../shared_style/_styleSettings' 
+import { white } from '../../shared_style/styles' 
 
 export const StyledHome = styled.div`
 flex-direction: column;
-color: ${settings.colors["white"]};
+color: ${white};
 `
 
 export const StyledUl = styled.ul`
