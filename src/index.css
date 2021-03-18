@@ -1,5 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #4c6b99;
+  background: #655653 url("./images/bg.jpg");
+  background-size: cover;
 }

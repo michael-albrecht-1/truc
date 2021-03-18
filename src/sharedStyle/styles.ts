@@ -11,13 +11,22 @@ export const color3= "#e6a00b";
 export const color4= "#d49409";
 export const color5= "#36d0ea";
 export const white= "#ddd";
-export const black= "rgb(20, 20, 20)";
+export const black= "#211e1e";
 
 export const StyledI = styled.i`
-    margin-right: 1rem;
+  margin-right: 1rem;
 `
+
 export const StyledH1 = styled.h1`
   margin: 2rem 0;
   font-family: ${font4};
   text-align: center;
+`
+export const StyledA = styled.a`
+  text-decoration: none;
+  color: ${white};
+  cursor: pointer;
+  :visited {
+    color: ${white};
+  }
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { white } from '../../shared_style/styles' 
+import { white } from '../../sharedStyle/styles' 
 
 export const StyledHome = styled.div`
 flex-direction: column;

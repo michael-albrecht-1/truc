@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { color1, white, black } from "../../shared_style/styles"
+import { color1, white, black, StyledI } from "../../sharedStyle/styles"
 
 export const StyledList = styled.ul`  
   padding: 0;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -40,4 +41,15 @@ export const StyledListItem = styled.li`
     border-right: ${black} 2px solid;
     text-align: center;    
   }
+`
+
+export const StyledListItemIcon = styled(StyledI)`
+display:inline-block;
+font-size: 20px;
+line-height: 20px;
+color:white;
+width: 20px;
+height: 20px;
+text-align: center;
+vertical-align: bottom;
 `

@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import firebase from "../../utils/firebaseConfig";
 import { Link } from "react-router-dom";
-import { StyledLogoDiv, StyledLogoImg} from "./Header.styled";
+import { 
+  StyledHeaderContainer, 
+  StyledLogoDiv, 
+  StyledLogoImg, 
+  StyledTitleContainer, 
+  StyledProfilList,
+  StyledProfilListItem,
+  StyledProfilListItemIcon,
+} from "./Header.styled";
 
 const months = [
   "Janvier",
@@ -29,40 +37,40 @@ const Header = () => {
   const date = new Date();
 
   return (
-    <div className="header">
+    <StyledHeaderContainer>
     <StyledLogoDiv>
         <Link to="/">
         <StyledLogoImg className="logo" src="../../images/moon2.svg" alt="logo" />
         </Link>
     </StyledLogoDiv>
-    <div className="title">
+    <StyledTitleContainer>
         <Link to="/">
         <div className="date">{displayedDate(date)}</div>
         <h1>L'truc que J'préfère !</h1>
         </Link>
-    </div>
-    <ul className="profil">
+    </StyledTitleContainer>
+    <StyledProfilList>
         {!areProfileActionsDisplayed ? (
-        <li onClick={() => setAreProfileActionsDisplayed(true)}>
-            <i className="far fa-user"></i>Profil
-        </li>
+        <StyledProfilListItem onClick={() => setAreProfileActionsDisplayed(true)}>
+            <StyledProfilListItemIcon className="far fa-user"></StyledProfilListItemIcon>Profil
+        </StyledProfilListItem>
         ) : (
         <>
-            <li>
+            <StyledProfilListItem>
             <Link to="/profile">
-                <i className="fas fa-cog" />Gérer mon profil
+                <StyledProfilListItemIcon className="fas fa-cog" />Gérer mon profil
             </Link>
-            </li>
-            <li onClick={() => firebase.auth().signOut()}>
-            <i className="fas fa-sign-out-alt" />Se déconnecter
-            </li>
-            <li onClick={() => setAreProfileActionsDisplayed(false)}>
-            <i className="fas fa-times" />Fermer
-            </li>
+            </StyledProfilListItem>
+            <StyledProfilListItem onClick={() => firebase.auth().signOut()}>
+            <StyledProfilListItemIcon className="fas fa-sign-out-alt" />Se déconnecter
+            </StyledProfilListItem>
+            <StyledProfilListItem onClick={() => setAreProfileActionsDisplayed(false)}>
+            <StyledProfilListItemIcon className="fas fa-times" />Fermer
+            </StyledProfilListItem>
         </>
         )}
-    </ul>
-    </div>
+    </StyledProfilList>
+    </StyledHeaderContainer>
   );
 };
 
