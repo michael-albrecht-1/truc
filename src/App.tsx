@@ -9,6 +9,7 @@ import { settings } from "./shared_style/_styleSettings"
 import Home from "./components/Home/Home";
 import Beers from "./components/Beers/Beers";
 import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 
@@ -34,7 +35,10 @@ function App() {
     <StyledDiv>
       {isSignedIn ? (
         <Router>
-          <Navbar />
+          <header>
+            <Header />
+            <Navbar />
+          </header>
           <Switch>
             <Route path="/beers">
               <Beers />
