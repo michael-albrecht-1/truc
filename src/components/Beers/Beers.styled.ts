@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { white } from '../../sharedStyle/styles' 
 import { StyledH1, StyledI } from '../../sharedStyle/styles';
 
-export const StyledProfileContent = styled.div`
+export const StyledBeersContent = styled.div`
 flex-direction: column;
 color: ${white};
 `

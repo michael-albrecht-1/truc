@@ -1,7 +1,6 @@
 import React from "react";
 import firebase from "../../utils/firebaseConfig";
-import { StyledProfileContent} from "./Profile.styled"
-import { StyledH1, StyledI } from '../../sharedStyle/styles';
+import { StyledProfileContent, StyledTitle, StyledIcon} from "./Profile.styled"
 
 const profile = () => {
   const currentUser = firebase.auth().currentUser;
@@ -12,10 +11,10 @@ const profile = () => {
 
   return (
     <StyledProfileContent>
-      <StyledH1>
-        <StyledI className="fas fa-cog"></StyledI>
+      <StyledTitle>
+        <StyledIcon className="fas fa-cog"></StyledIcon>
         Profile de {currentUser.displayName}
-      </StyledH1>
+      </StyledTitle>
     </StyledProfileContent>
   );
 };

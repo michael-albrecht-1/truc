@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import beerService, { Beer } from "../../services/beerService";
 
+import { StyledBeersContent, StyledTitle, StyledIcon } from "./Beers.styled"
+
 const initialSelectedBeerId = null;
 const initialFilteredBeersList: Beer[] = [];
 
@@ -66,10 +68,10 @@ const Beers = () => {
   };
 
   return (
-    <div className="beerContent">
-      <h1>
-        <i className="fas fa-beer"></i>Radio bière foot !
-      </h1>
+    <StyledBeersContent>
+      <StyledTitle>
+        <StyledIcon className="fas fa-beer"></StyledIcon>Radio bière foot !
+      </StyledTitle>
       <div className="form">
         <div className="inputs">
           <div className="form-group">
@@ -135,7 +137,7 @@ const Beers = () => {
           </div>
         </div>
       </div>
-    </div>
+    </StyledBeersContent>
   );
 };
 
