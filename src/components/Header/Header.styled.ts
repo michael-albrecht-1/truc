@@ -101,7 +101,6 @@ export const StyledProfilListItem = styled.li`
   color: ${color1};
   }
   @media screen and (min-width: 640px) {
-    border-bottom: ${black} 2px solid;
     padding: 10px 0.4rem;
   }
 `
