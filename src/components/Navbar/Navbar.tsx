@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import firebase from "../../utils/firebaseConfig";
 import { Link } from "react-router-dom";
+import { StyledLogoDiv, StyledLogoImg} from "./Navbar.styles";
 
 const months = [
   "Janvier",
@@ -30,11 +31,11 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="header">
-        <div className="logoDiv">
+        <StyledLogoDiv>
           <Link to="/">
-            <img className="logo" src="../../images/moon2.svg" alt="logo" />
+            <StyledLogoImg className="logo" src="../../images/moon2.svg" alt="logo" />
           </Link>
-        </div>
+        </StyledLogoDiv>
         <div className="title">
           <Link to="/">
             <div className="date">{displayedDate(date)}</div>

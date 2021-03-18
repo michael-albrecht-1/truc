@@ -3,11 +3,22 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import firebase from "./utils/firebaseConfig";
 
+import styled from "styled-components";
+import { settings } from "./shared_style/_styleSettings"
+
 import Home from "./components/Home/Home";
 import Beers from "./components/Beers/Beers";
 import Profile from "./components/Profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+
+const StyledDiv = styled.div`
+  margin: 1rem auto;
+  max-width: 1200px;
+  font-family: $font-1;
+  color: ${settings.colors["white"]};
+  background: #fffcf9 url(./images/ricepaper-charcoal.jpg);
+`
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -20,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledDiv>
       {isSignedIn ? (
         <Router>
           <Navbar />
@@ -39,7 +50,7 @@ function App() {
       ) : (
         <Login />
       )}
-    </div>
+    </StyledDiv>
   );
 }
 
