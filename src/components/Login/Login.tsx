@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "../../utils/firebaseConfig";
+import { StyledLoginContent, StyledTitle} from "./Login.styled"
 
 const uiConfig = {
     signInFlow: "popup",
@@ -13,14 +14,13 @@ const uiConfig = {
   
 const Login = () => {
     return (
-        <div className="container">
-          <h1>Le truc que j'préfère</h1>
-          <h2>Connexion</h2>
+        <StyledLoginContent>
+          <StyledTitle>Le truc que j'préfère / Connexion</StyledTitle>
           <StyledFirebaseAuth
             uiConfig={uiConfig}
             firebaseAuth={firebase.auth()}
           />
-        </div>
+        </StyledLoginContent>
     );
 };
 
