@@ -3,4 +3,5 @@ body {
   padding: 0;
   background: #655653 url("./images/bg.jpg");
   background-size: cover;
+  min-height: 100vh;
 }
