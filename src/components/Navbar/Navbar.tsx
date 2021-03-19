@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { StyledList, StyledListItem, StyledListItemIcon } from "./Navbar.styled";
-import { StyledI } from "../../sharedStyle/styles"
  
 const Navbar = () => {
   return (
