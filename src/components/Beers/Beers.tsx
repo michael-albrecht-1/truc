@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import beerService, { Beer } from "../../services/beerService";
 
-import { 
-  StyledBeersContent, 
-  StyledTitle, 
+import {
+  StyledBeersContent,
+  StyledTitle,
   StyledIcon,
   StyledBeerForm,
   StyledBeerInputGroup,

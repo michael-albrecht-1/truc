@@ -5,13 +5,13 @@ export const font2 = "'Dosis', sans-serif";
 export const font3 = "'Josefin Sans', serif";
 export const font4 = "'Roboto', sans-serif";
 
-export const color1= "#ecc163";
-export const color2= "#ebb33c";
-export const color3= "#e6a00b";
-export const color4= "#d49409";
-export const color5= "#36d0ea";
-export const white= "#ddd";
-export const black= "#211e1e";
+export const color1 = "#ecc163";
+export const color2 = "#ebb33c";
+export const color3 = "#e6a00b";
+export const color4 = "#d49409";
+export const color5 = "#36d0ea";
+export const white = "#ddd";
+export const black = "#211e1e";
 
 export const StyledI = styled.i`
   margin-right: 1rem;
@@ -29,7 +29,7 @@ export const StyledA = styled.a`
   :visited {
     color: ${white};
   }
-  `
+`
 export const StyledForm = styled.form`
   font-family: $font-4;
   font-size: 1.2rem;
@@ -38,7 +38,7 @@ export const StyledForm = styled.form`
   flex-direction: column;
   border-top: ${black} solid 2px;
   text-align: left;
-  `
+`
 
 export const StyledInputGroup = styled.div`
   border-bottom: ${black} solid 2px;
@@ -80,7 +80,7 @@ export const StyledInput = styled.input`
   color: ${color3};
   padding: 10px 2rem;
   font-size: 1.2rem;
-  
+
   ::placeholder {
     color: rgb(145, 142, 142);
   }

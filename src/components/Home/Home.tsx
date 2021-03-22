@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledH1, StyledI } from '../../sharedStyle/styles';
-import { StyledHomeContent, StyledUl} from './Home.styled';
+import { StyledH1, StyledI } from '../../styles/shared';
+import { StyledHomeContent, StyledUl } from './Home.styled';
 
 const Home = () => {
   return (

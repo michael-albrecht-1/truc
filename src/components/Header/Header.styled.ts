@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { black, white, color1, font4, StyledI} from "../../sharedStyle/styles"
+import { black, white, color1, font4, StyledI } from "../../styles/shared"
 
 export const StyledHeaderContainer = styled.div`
   display: flex;
@@ -29,7 +29,6 @@ export const StyledLogoImg = styled.img`
   :hover {
     transform: rotate(7deg);
   }
-
 `
 
 export const StyledTitleContainer = styled.div`
@@ -96,6 +95,7 @@ export const StyledProfilListItem = styled.li`
     text-decoration: none;
     :visited {
       color: ${white};
+    }
   }
   :hover, a:hover {
   color: ${color1};
@@ -106,12 +106,12 @@ export const StyledProfilListItem = styled.li`
 `
 
 export const StyledProfilListItemIcon = styled(StyledI)`
-display:inline-block;
-font-size: 20px;
-line-height: 20px;
-color:white;
-width: 20px;
-height: 20px;
-text-align: center;
-vertical-align: bottom;
+  display:inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  color:white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: bottom;
 `

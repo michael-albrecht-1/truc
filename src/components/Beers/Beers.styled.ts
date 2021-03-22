@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import { white } from '../../sharedStyle/styles' 
-import { 
-  StyledH1, 
-  StyledI, 
-  StyledInput, 
-  StyledLabel, 
-  StyledForm, 
-  StyledInputGroup, 
-  StyledButtonGroup, 
-} from '../../sharedStyle/styles';
+import { white } from '../../styles/shared'
+import {
+  StyledH1,
+  StyledI,
+  StyledInput,
+  StyledLabel,
+  StyledForm,
+  StyledInputGroup,
+  StyledButtonGroup,
+} from '../../styles/shared';
 
 export const StyledBeersContent = styled.div`
-display: flex;
-flex-direction: column;
-color: ${white};
+  display: flex;
+  flex-direction: column;
+  color: ${white};
 `
 export const StyledTitle = styled(StyledH1)``;
 

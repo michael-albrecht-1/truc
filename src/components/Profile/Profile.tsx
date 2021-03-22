@@ -1,11 +1,11 @@
 import React from "react";
 import firebase from "../../utils/firebaseConfig";
-import { StyledProfileContent, StyledTitle, StyledIcon} from "./Profile.styled"
+import { StyledProfileContent, StyledTitle, StyledIcon } from "./Profile.styled"
 
 const profile = () => {
   const currentUser = firebase.auth().currentUser;
 
-  if(currentUser === null) {
+  if (currentUser === null) {
     return <div>Authentication error</div>
   }
 
@@ -13,7 +13,7 @@ const profile = () => {
     <StyledProfileContent>
       <StyledTitle>
         <StyledIcon className="fas fa-cog"></StyledIcon>
-        Profile de {currentUser.displayName}
+        Profil de {currentUser.displayName}
       </StyledTitle>
     </StyledProfileContent>
   );

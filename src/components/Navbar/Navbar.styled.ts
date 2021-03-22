@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { color1, white, black, StyledI } from "../../sharedStyle/styles"
+import { color1, white, black, StyledI } from "../../styles/shared"
 
-export const StyledList = styled.ul`  
+export const StyledList = styled.ul`
   padding: 0;
   margin-top: 0;
   display: flex;
@@ -39,17 +39,17 @@ export const StyledListItem = styled.li`
   @media screen and (min-width: 640px) {
     border-top: none;
     border-right: ${black} 2px solid;
-    text-align: center;    
+    text-align: center;
   }
 `
 
 export const StyledListItemIcon = styled(StyledI)`
-display:inline-block;
-font-size: 20px;
-line-height: 20px;
-color:white;
-width: 20px;
-height: 20px;
-text-align: center;
-vertical-align: bottom;
+  display:inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  color:white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: bottom;
 `
