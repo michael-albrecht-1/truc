@@ -3,8 +3,8 @@ import beerService, { Beer } from "../../services/beerService";
 
 import {
   StyledBeersContent,
-  StyledTitle,
-  StyledIcon,
+  StyledBeerTitle,
+  StyledBeerIcon,
   StyledBeerForm,
   StyledBeerInputGroup,
   StyledBeerLabel,
@@ -80,9 +80,9 @@ const Beers = () => {
 
   return (
     <StyledBeersContent>
-      <StyledTitle>
-        <StyledIcon className="fas fa-beer"></StyledIcon>Radio bière foot !
-      </StyledTitle>
+      <StyledBeerTitle>
+        <StyledBeerIcon className="fas fa-beer"></StyledBeerIcon>Radio bière foot !
+      </StyledBeerTitle>
       <StyledBeerForm>
         <StyledBeerInputGroup>
           <StyledBeerLabel htmlFor="name">Nom</StyledBeerLabel>

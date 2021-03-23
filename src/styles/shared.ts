@@ -19,6 +19,7 @@ export const StyledI = styled.i`
 
 export const StyledH1 = styled.h1`
   margin: 2rem 0;
+  font-size: 1.6rem;
   font-family: ${font4};
   text-align: center;
 `

@@ -15,19 +15,19 @@ export const StyledBeersContent = styled.div`
   flex-direction: column;
   color: ${white};
 `
-export const StyledTitle = styled(StyledH1)``;
+export const StyledBeerTitle = StyledH1;
 
-export const StyledIcon = styled(StyledI)``;
+export const StyledBeerIcon = StyledI;
 
-export const StyledBeerForm = styled(StyledForm)``;
+export const StyledBeerForm = StyledForm;
 
-export const StyledBeerInputGroup = styled(StyledInputGroup)``;
+export const StyledBeerInputGroup = StyledInputGroup;
 
-export const StyledBeerLabel = styled(StyledLabel)``;
+export const StyledBeerLabel = StyledLabel;
 
-export const StyledBeerInput = styled(StyledInput)``;
+export const StyledBeerInput = StyledInput;
 
-export const StyledBeerButtonGroup = styled(StyledButtonGroup)``;
+export const StyledBeerButtonGroup = StyledButtonGroup;
 
 export const StyledBeerSuggestionList = styled.ul`
   margin: 0;

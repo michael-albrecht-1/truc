@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "../../utils/firebaseConfig";
-import { StyledLoginContent, StyledTitle } from "./Login.styled"
+import { StyledLoginContent, StyledLoginTitle } from "./Login.styled"
 
 const uiConfig = {
   signInFlow: "popup",
@@ -15,7 +15,7 @@ const uiConfig = {
 const Login = () => {
   return (
     <StyledLoginContent>
-      <StyledTitle>Le truc que j'préfère / Connexion</StyledTitle>
+      <StyledLoginTitle>Le truc que j'préfère / Connexion</StyledLoginTitle>
       <StyledFirebaseAuth
         uiConfig={uiConfig}
         firebaseAuth={firebase.auth()}

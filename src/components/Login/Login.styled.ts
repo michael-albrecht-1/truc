@@ -6,4 +6,4 @@ export const StyledLoginContent = styled.div`
   flex-direction: column;
   color: ${white};
 `
-export const StyledTitle = styled(StyledH1)``;
+export const StyledLoginTitle = styled(StyledH1)``;
