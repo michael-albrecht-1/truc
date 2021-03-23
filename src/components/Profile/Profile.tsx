@@ -1,20 +1,21 @@
 import React from "react";
 import firebase from "../../utils/firebaseConfig";
+import { StyledProfileContent, StyledTitle, StyledIcon } from "./Profile.styled"
 
 const profile = () => {
   const currentUser = firebase.auth().currentUser;
 
-  if(currentUser === null) {
+  if (currentUser === null) {
     return <div>Authentication error</div>
   }
 
   return (
-    <div className="profileContent">
-      <h1>
-        <i className="fas fa-cog"></i>
-        Profile de {currentUser.displayName}
-      </h1>
-    </div>
+    <StyledProfileContent>
+      <StyledTitle>
+        <StyledIcon className="fas fa-cog"></StyledIcon>
+        Profil de {currentUser.displayName}
+      </StyledTitle>
+    </StyledProfileContent>
   );
 };
 

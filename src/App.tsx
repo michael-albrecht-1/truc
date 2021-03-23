@@ -6,8 +6,11 @@ import firebase from "./utils/firebaseConfig";
 import Home from "./components/Home/Home";
 import Beers from "./components/Beers/Beers";
 import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+
+
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -20,10 +23,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <>
       {isSignedIn ? (
         <Router>
-          <Navbar />
+          <header>
+            <Header />
+            <Navbar />
+          </header>
           <Switch>
             <Route path="/beers">
               <Beers />
@@ -39,7 +45,7 @@ function App() {
       ) : (
         <Login />
       )}
-    </div>
+    </>
   );
 }
 
