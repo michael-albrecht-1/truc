@@ -32,7 +32,7 @@ export const StyledA = styled.a`
   }
 `
 export const StyledForm = styled.form`
-  font-family: $font-4;
+  font-family: ${font4};
   font-size: 1.2rem;
   margin-top: 4rem;
   display: flex;
